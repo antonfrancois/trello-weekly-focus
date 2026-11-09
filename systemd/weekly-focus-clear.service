@@ -1,0 +1,12 @@
+[Unit]
+Description=Weekly focus: daily clear of the Done list
+
+[Service]
+Type=oneshot
+# Template: replace /path/to/trello-weekly-focus and /path/to/python3, see README step 4.
+WorkingDirectory=/path/to/trello-weekly-focus
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/path/to/python3 -m weekly_focus --clear-done
+# e.g. no network yet right after boot: try again later (runs are idempotent)
+Restart=on-failure
+RestartSec=5min

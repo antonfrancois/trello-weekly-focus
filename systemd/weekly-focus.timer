@@ -1,0 +1,9 @@
+[Unit]
+Description=Run the Weekly focus reconciler every 10 minutes
+
+[Timer]
+OnCalendar=*:0/10
+Persistent=true
+
+[Install]
+WantedBy=timers.target

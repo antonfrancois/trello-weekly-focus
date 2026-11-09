@@ -1,0 +1,10 @@
+[project]
+name = "weekly-focus"
+version = "0.1.0"
+description = "Mirror Trello cards with a due date onto the Weekly focus board."
+requires-python = ">=3.11"
+dependencies = ["requests"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

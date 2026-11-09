@@ -1,0 +1,19 @@
+# Weekly focus reconciler configuration. Secrets (TRELLO_KEY, TRELLO_TOKEN) go in .env.
+
+timezone = "Europe/Paris"
+
+# The master board that receives the mirrors.
+board = "Weekly focus"
+
+# List names on the master board (matched ignoring case and surrounding spaces).
+[lists]
+doing = "Doing"
+today = "Today"
+tomorrow = "Tomorrow"
+this_week = "This week"
+done = "Done 🎉"
+
+# Source boards: every open board except the master board, filtered by these lists.
+[sources]
+include_boards = []   # if not empty, only these boards are scanned
+exclude_boards = []   # these boards are never scanned

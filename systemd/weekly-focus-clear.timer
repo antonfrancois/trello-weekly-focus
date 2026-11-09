@@ -1,0 +1,9 @@
+[Unit]
+Description=Daily clear of the Weekly focus Done list, shortly after midnight
+
+[Timer]
+OnCalendar=*-*-* 00:05:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target

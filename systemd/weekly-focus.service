@@ -1,0 +1,9 @@
+[Unit]
+Description=Weekly focus: mirror dated Trello cards onto the Weekly focus board
+
+[Service]
+Type=oneshot
+# Template: replace /path/to/trello-weekly-focus and /path/to/python3, see README step 4.
+WorkingDirectory=/path/to/trello-weekly-focus
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/path/to/python3 -m weekly_focus
